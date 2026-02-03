@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Anand Prakash! ❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef, #fecfef);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #e91e63;
+            text-shadow: 0 0 10px rgba(233, 30, 99, 0.5);
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        .tab-button:hover, .tab-button.active {
+            background: #c2185b;
+        }
+        .tab-content {
+            display: none;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .tab-content.active {
+            display: block;
+        }
+        p, ul {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .heart {
+            position: absolute;
+            font-size: 2em;
+            color: #ff4081;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Valentine's Day, Anand Prakash! ❤️</h1>
+        <p>Welcome to our little love corner, Anandu! 💖 Explore the tabs below for surprises just for you. 😘</p>
+        
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('welcome')">Welcome ❤️</button>
+            <button class="tab-button" onclick="showTab('favorites')">His Favorites 💕</button>
+            <button class="tab-button" onclick="showTab('proposal')">Our Proposal 💍</button>
+            <button class="tab-button" onclick="showTab('memories')">Memories 📸</button>
+            <button class="tab-button" onclick="showTab('future')">Future Plans 🌟</button>
+        </div>
+        
+        <!-- Tab Contents -->
+        <div id="welcome" class="tab-content active">
+            <p>My dearest Anandu ❤️, on this special day, I want to remind you how much you mean to me. Your smile lights up my world 💖, your laughter is my favorite song 🎶, and your love is my greatest treasure 💕. Here's to many more adventures together, filled with endless love and happiness! I love you endlessly! 😘❤️</p>
+        </div>
+        
+        <div id="favorites" class="tab-content">
+            <h2>Anandu's Favorites 💖</h2>
+            <ul>
+                <li><strong>Favorite Food:</strong> [Beerakaya🙂‍↕️]</li>
+                <li><strong>Favorite Movie:</strong> [Anime 🎥]</li>
+                <li><strong>Favorite Hobby:</strong> [Scloding me 😁]</li>
+                <li><strong>Favorite Song:</strong> [Something we enjoy together 🎵]</li>
+                <li><strong>Favorite Memory with Me:</strong> [Our first date at the park 🌳]</li>
+            </ul>
+            <p>These little things make you, you—and I love every bit! ❤️</p>
+        </div>
+        
+        <div id="proposal" class="tab-content">
+            <h2>Our Proposal 💍</h2>
+            <p>On [Date, May 05, 2023], under the stars, you asked me to be yours forever. It was magical, with candles and your nervous smile that melted my heart. 💕 That day changed everything—thank you for saying yes! 😘</p>
+            <p>Here's to forever, Anandu! ❤️</p>
+        </div>
+        
+        <div id="memories" class="tab-content">
+            <h2>Sweet Memories 📸</h2>
+            <ul>
+                <li>Our first kiss ❤️</li>
+                <li>That time we cook together with full of argues and mess😄</li>
+                <li>Traveling to [Araku] and sick eachother 🌍</li>
+                <li>Your surprise visit makes me so happy! 🎉</li>
+            </ul>
+        </div>
+        
+        <div id="future" class="tab-content">
+            <h2>Our Future Plans 🌟</h2>
+            <ul>
+                <li>Traveling the world together ✈️</li>
+                <li>Building our dream home 🏡</li>
+                <li>Growing old with endless cuddles and adventures 💑</li>
+                <li>Having [kids/pets] and making more memories 👨‍👩‍👧</li>
+            </ul>
+            <p>I can't wait for what's next, Anandu! You're my everything. 😘💖</p>
+        </div>
+    </div>
+
+    <!-- Floating hearts animation -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 6000);
+        }
+        setInterval(createHeart, 300);
+
+        function showTab(tabId) {
+            // Hide all tabs
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            // Remove active from buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+            // Add active to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
